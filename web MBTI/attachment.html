@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attachment Styles · Know Yourself</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<main class="wrap" id="app"></main>
+<script src="assets/store.js"></script>
+<script src="assets/app.js"></script>
+<script>
+KY.initTopic({
+  nav:'attach', type:'attach', badgeClass:'b3', emoji:'🔗',
+  kicker:{en:'Relationships', sk:'Vzťahy'},
+  title:{en:'Attachment Styles', sk:'Typy vzťahovej väzby'},
+  lead:{en:'Attachment theory describes the patterns we form in close relationships, shaped by early experiences. Your style affects how you handle closeness, conflict and trust. There are four main styles.',
+        sk:'Teória vzťahovej väzby opisuje vzorce, ktoré si vytvárame v blízkych vzťahoch, formované ranými skúsenosťami. Tvoj typ ovplyvňuje, ako zvládaš blízkosť, konflikt a dôveru. Existujú štyri hlavné typy.'},
+  chips:[
+    {title:{en:'🌿 Secure', sk:'🌿 Istá'}, body:{en:'Comfortable with closeness and independence', sk:'V pohode s blízkosťou aj nezávislosťou'}},
+    {title:{en:'🌊 Anxious', sk:'🌊 Úzkostná'}, body:{en:'Craves closeness, fears abandonment', sk:'Túži po blízkosti, bojí sa opustenia'}},
+    {title:{en:'🏔️ Avoidant', sk:'🏔️ Vyhýbavá'}, body:{en:'Values independence, keeps distance', sk:'Cení si nezávislosť, drží si odstup'}},
+    {title:{en:'🌀 Fearful-Avoidant', sk:'🌀 Úzkostno-vyhýbavá'}, body:{en:'Wants closeness but fears it', sk:'Túži po blízkosti, no bojí sa jej'}}
+  ],
+  explanation:{
+    en:'<p>Attachment styles sit on two dimensions: <b>anxiety</b> (fear of abandonment, need for reassurance) and <b>avoidance</b> (discomfort with closeness and dependence). Where you land creates your style.</p>'+
+       '<h4>The four styles</h4>'+
+       '<p><b>Secure (low anxiety, low avoidance):</b> You trust others, communicate needs openly, and balance intimacy with autonomy. Conflict feels solvable rather than threatening.</p>'+
+       '<p><b>Anxious / Preoccupied (high anxiety, low avoidance):</b> You deeply value closeness but worry about being abandoned or not loved enough, and may seek frequent reassurance.</p>'+
+       '<p><b>Avoidant / Dismissive (low anxiety, high avoidance):</b> You prize independence and self-reliance, and can feel crowded when others get too close or emotional.</p>'+
+       '<p><b>Fearful-Avoidant / Disorganized (high anxiety, high avoidance):</b> You crave intimacy and fear it at the same time — pulling people close, then pushing them away.</p>'+
+       '<h4>Good news</h4>'+
+       '<p>Attachment styles are not fixed. With self-awareness, secure relationships and sometimes therapy, people can move toward "earned secure" attachment over time.</p>'+
+       '<p class="disclaimer" style="text-align:left;margin:14px 0 0">Educational self-reflection tool, not a diagnosis.</p>',
+    sk:'<p>Typy väzby ležia na dvoch dimenziách: <b>úzkosť</b> (strach z opustenia, potreba uistenia) a <b>vyhýbavosť</b> (nepohodlie z blízkosti a závislosti). To, kde sa nachádzaš, tvorí tvoj typ.</p>'+
+       '<h4>Štyri typy</h4>'+
+       '<p><b>Istá (nízka úzkosť, nízka vyhýbavosť):</b> Dôveruješ druhým, otvorene komunikuješ potreby a vyvažuješ intimitu s nezávislosťou. Konflikt pôsobí ako riešiteľný, nie ohrozujúci.</p>'+
+       '<p><b>Úzkostná / zaujatá (vysoká úzkosť, nízka vyhýbavosť):</b> Hlboko si ceníš blízkosť, no obávaš sa opustenia alebo že nie si dosť milovaný, a môžeš hľadať časté uistenie.</p>'+
+       '<p><b>Vyhýbavá / odmietavá (nízka úzkosť, vysoká vyhýbavosť):</b> Ceníš si nezávislosť a sebestačnosť a môžeš sa cítiť zovretý, keď sa iní priveľmi zblížia alebo sú emotívni.</p>'+
+       '<p><b>Úzkostno-vyhýbavá / dezorganizovaná (vysoká úzkosť, vysoká vyhýbavosť):</b> Túžiš po intimite a zároveň sa jej bojíš — priťahuješ ľudí a potom ich odtláčaš.</p>'+
+       '<h4>Dobrá správa</h4>'+
+       '<p>Typy väzby nie sú dané navždy. So sebauvedomením, bezpečnými vzťahmi a niekedy terapiou sa ľudia môžu časom posunúť k „získanej istej" väzbe.</p>'+
+       '<p class="disclaimer" style="text-align:left;margin:14px 0 0">Vzdelávací nástroj na sebareflexiu, nie diagnóza.</p>'
+  },
+  testBtn:{en:'Discover your attachment style →', sk:'Zisti svoj typ vzťahovej väzby →'},
+  questions:[
+    {key:'ANX', en:'I often worry that my partner does not really love me.', sk:'Často sa obávam, že ma partner v skutočnosti neľúbi.'},
+    {key:'ANX', en:'I need a lot of reassurance that I am valued in a relationship.', sk:'Potrebujem veľa uistenia, že si ma vo vzťahu vážia.'},
+    {key:'ANX', en:'I am afraid of being abandoned by the people closest to me.', sk:'Bojím sa, že ma blízki ľudia opustia.'},
+    {key:'ANX', en:'I get anxious when my partner is distant or slow to respond.', sk:'Som nervózny, keď je partner odťažitý alebo odpovedá pomaly.'},
+    {key:'ANX', en:'I tend to overthink small changes in my partner’s behavior.', sk:'Malé zmeny v správaní partnera mám sklon priveľmi rozoberať.'},
+    {key:'ANX', en:'I worry about being "too much" and driving people away.', sk:'Obávam sa, že som „priveľa" a odoženiem ľudí.'},
+    {key:'AVO', en:'I find it hard to fully depend on a partner.', sk:'Je pre mňa ťažké sa na partnera úplne spoľahnúť.'},
+    {key:'AVO', en:'I prefer to keep some emotional distance in relationships.', sk:'Vo vzťahoch si radšej držím istý emočný odstup.'},
+    {key:'AVO', en:'I feel uncomfortable when someone wants to get very close.', sk:'Je mi nepríjemné, keď sa chce niekto veľmi zblížiť.'},
+    {key:'AVO', en:'I tend to handle problems on my own rather than seek support.', sk:'Problémy mám sklon riešiť sám než hľadať podporu.'},
+    {key:'AVO', en:'Opening up about my deeper feelings feels difficult for me.', sk:'Otvoriť sa s hlbšími pocitmi je pre mňa náročné.'},
+    {key:'AVO', en:'I value my independence more than deep closeness.', sk:'Svoju nezávislosť si cením viac než hlbokú blízkosť.'}
+  ],
+  results:{
+    subtitle:{en:'Your attachment style', sk:'Tvoj typ vzťahovej väzby'},
+    barsTitle:{en:'Your dimensions', sk:'Tvoje dimenzie'},
+    anxLabel:{en:'Attachment anxiety', sk:'Úzkosť vo väzbe'},
+    avoLabel:{en:'Attachment avoidance', sk:'Vyhýbavosť vo väzbe'},
+    types:{ sk:{
+      Secure:{emoji:'🌿',name:'Istá väzba',desc:'Si v pohode s blízkosťou aj nezávislosťou. Ľahko dôveruješ, otvorene komunikuješ svoje potreby a konflikt vnímaš ako niečo, čo sa dá spolu vyriešiť.'},
+      Anxious:{emoji:'🌊',name:'Úzkostná / zaujatá väzba',desc:'Hlboko si ceníš blízkosť a do vzťahu veľa dávaš, no môžeš sa obávať opustenia alebo že nie si dosť milovaný, a hľadať časté uistenie. Pomáha budovanie dôvery v seba a jasná komunikácia.'},
+      Avoidant:{emoji:'🏔️',name:'Vyhýbavá / odmietavá väzba',desc:'Ceníš si nezávislosť a sebestačnosť a zostávaš pokojný pod tlakom, no emočná blízkosť ti môže byť nepríjemná. Vpúšťať dôveryhodných ľudí — postupne — prehlbuje tvoje putá.'},
+      Fearful:{emoji:'🌀',name:'Úzkostno-vyhýbavá väzba',desc:'Túžiš po blízkosti a zároveň sa jej bojíš, takže ľudí priťahuješ a potom odtláčaš. Bezpečie, stálosť a súcit k sebe ti pomáhajú smerovať k istote.'}
+    }, en:{
+      Secure:{emoji:'🌿',name:'Secure',desc:'You are comfortable with both closeness and independence. You trust easily, communicate your needs openly, and see conflict as something you can work through together.'},
+      Anxious:{emoji:'🌊',name:'Anxious / Preoccupied',desc:'You deeply value closeness and give a lot in relationships, but you can worry about being abandoned or not loved enough, and may seek frequent reassurance. Building self-trust and clear communication helps you feel secure.'},
+      Avoidant:{emoji:'🏔️',name:'Avoidant / Dismissive',desc:'You prize independence and self-reliance and stay calm under pressure, but emotional closeness can feel uncomfortable. Letting trusted people in — a little at a time — deepens your bonds.'},
+      Fearful:{emoji:'🌀',name:'Fearful-Avoidant',desc:'You crave intimacy and fear it at the same time, so you may pull people close and then push them away. Safety, consistency and self-compassion help you move toward security.'}
+    } }
+  }
+});
+</script>
+</body>
+</html>

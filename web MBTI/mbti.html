@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 16 Personality Types · Know Yourself</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<main class="wrap" id="app"></main>
+<script src="assets/store.js"></script>
+<script src="assets/app.js"></script>
+<script>
+KY.initTopic({
+  nav:'mbti', type:'mbti', badgeClass:'b1', emoji:'🧠',
+  kicker:{en:'Personality', sk:'Osobnosť'},
+  title:{en:'The 16 Personality Types', sk:'16 typov osobnosti'},
+  lead:{en:'The 16-type model sorts personality along four preferences: where you get energy, how you take in information, how you make decisions, and how you organize your life. Combine them and you get a four-letter type like <b>INFP</b> or <b>ESTJ</b>.',
+        sk:'Model 16 typov triedi osobnosť podľa štyroch preferencií: odkiaľ čerpáš energiu, ako prijímaš informácie, ako sa rozhoduješ a ako si organizuješ život. Ich kombináciou vznikne štvorpísmenový typ ako <b>INFP</b> alebo <b>ESTJ</b>.'},
+  chips:[
+    {title:{en:'E / I', sk:'E / I'}, body:{en:'Extraversion vs. Introversion — outward energy or inward focus', sk:'Extraverzia vs. introverzia — energia smerom von alebo dovnútra'}},
+    {title:{en:'S / N', sk:'S / N'}, body:{en:'Sensing vs. Intuition — concrete facts or big-picture patterns', sk:'Zmysly vs. intuícia — konkrétne fakty alebo vzorce a súvislosti'}},
+    {title:{en:'T / F', sk:'T / F'}, body:{en:'Thinking vs. Feeling — logic or values when deciding', sk:'Myslenie vs. cítenie — logika alebo hodnoty pri rozhodovaní'}},
+    {title:{en:'J / P', sk:'J / P'}, body:{en:'Judging vs. Perceiving — planned or flexible lifestyle', sk:'Usudzovanie vs. vnímanie — plánovitý alebo flexibilný štýl'}}
+  ],
+  explanation:{
+    en:'<p>Each letter is a <b>preference</b>, not a box. You use both sides of every pair, but one usually feels more natural — like being right- or left-handed.</p>'+
+       '<h4>The four dimensions</h4>'+
+       '<p><b>Extraversion (E) / Introversion (I):</b> Extraverts recharge around people and think out loud; introverts recharge in solitude and process internally.</p>'+
+       '<p><b>Sensing (S) / Intuition (N):</b> Sensors trust direct experience, details and the present; intuitives are drawn to patterns, meaning and future possibilities.</p>'+
+       '<p><b>Thinking (T) / Feeling (F):</b> Thinkers prioritize logic, fairness and consistency; feelers weigh harmony, empathy and personal values.</p>'+
+       '<p><b>Judging (J) / Perceiving (P):</b> Judgers like plans, structure and closure; perceivers like flexibility, spontaneity and keeping options open.</p>'+
+       '<h4>What your type tells you</h4>'+
+       '<p>Your type highlights natural strengths, blind spots, communication style and how you tend to handle stress and relationships. It is a mirror for self-reflection — not a destiny or a limit.</p>'+
+       '<p class="disclaimer" style="text-align:left;margin:14px 0 0">This is a simplified, educational version inspired by Jungian type theory. It is for fun and self-insight, not a clinical assessment.</p>',
+    sk:'<p>Každé písmeno je <b>preferencia</b>, nie škatuľka. Používaš obe strany každej dvojice, ale jedna ti zvyčajne sedí prirodzenejšie — ako keď si pravák alebo ľavák.</p>'+
+       '<h4>Štyri dimenzie</h4>'+
+       '<p><b>Extraverzia (E) / Introverzia (I):</b> Extraverti čerpajú energiu medzi ľuďmi a premýšľajú nahlas; introverti načerpajú v samote a spracúvajú veci vnútri.</p>'+
+       '<p><b>Zmysly (S) / Intuícia (N):</b> Zmyslové typy veria priamej skúsenosti, detailom a prítomnosti; intuitívne typy priťahujú vzorce, význam a budúce možnosti.</p>'+
+       '<p><b>Myslenie (T) / Cítenie (F):</b> Mysliace typy uprednostňujú logiku, férovosť a dôslednosť; cítiace typy zvažujú harmóniu, empatiu a osobné hodnoty.</p>'+
+       '<p><b>Usudzovanie (J) / Vnímanie (P):</b> Usudzujúce typy majú radi plány, štruktúru a uzavretie; vnímajúce typy majú radi flexibilitu, spontánnosť a otvorené možnosti.</p>'+
+       '<h4>Čo o tebe typ hovorí</h4>'+
+       '<p>Tvoj typ poukazuje na prirodzené silné stránky, slepé miesta, štýl komunikácie a to, ako zvládaš stres a vzťahy. Je to zrkadlo na sebareflexiu — nie osud ani obmedzenie.</p>'+
+       '<p class="disclaimer" style="text-align:left;margin:14px 0 0">Toto je zjednodušená, vzdelávacia verzia inšpirovaná Jungovou teóriou typov. Slúži na zábavu a sebapoznanie, nie ako klinické vyšetrenie.</p>'
+  },
+  testBtn:{en:'Take the personality test →', sk:'Spustiť test osobnosti →'},
+  questions:[
+    {dim:'EI',key:'E', en:'I feel energized after spending time with a group of people.', sk:'Po čase strávenom v skupine ľudí sa cítim nabitý energiou.'},
+    {dim:'EI',key:'I', en:'I usually prefer a quiet evening alone to a big social gathering.', sk:'Tichý večer o samote mám zvyčajne radšej ako veľkú spoločenskú akciu.'},
+    {dim:'EI',key:'E', en:'I tend to think out loud and talk through my ideas with others.', sk:'Svoje myšlienky rád premýšľam nahlas a preberám ich s ostatnými.'},
+    {dim:'EI',key:'I', en:'I need plenty of alone time to recharge my batteries.', sk:'Na načerpanie energie potrebujem veľa času o samote.'},
+    {dim:'EI',key:'E', en:'I find it easy to strike up a conversation with strangers.', sk:'Ľahko nadviažem rozhovor s cudzími ľuďmi.'},
+    {dim:'SN',key:'S', en:'I focus on concrete facts and details more than the big picture.', sk:'Sústredím sa skôr na konkrétne fakty a detaily než na celkový obraz.'},
+    {dim:'SN',key:'N', en:'I am drawn to abstract ideas, theories and possibilities.', sk:'Priťahujú ma abstraktné myšlienky, teórie a možnosti.'},
+    {dim:'SN',key:'S', en:'I trust practical experience more than hunches or gut feelings.', sk:'Praktickej skúsenosti dôverujem viac než tušeniu či intuícii.'},
+    {dim:'SN',key:'N', en:'I often imagine how things could be in the future.', sk:'Často si predstavujem, ako by veci mohli vyzerať v budúcnosti.'},
+    {dim:'SN',key:'S', en:'I prefer clear real-world examples over abstract concepts.', sk:'Mám radšej jasné príklady z reálneho života než abstraktné pojmy.'},
+    {dim:'TF',key:'T', en:'I make decisions based on logic rather than personal feelings.', sk:'Rozhodnutia robím skôr na základe logiky než osobných pocitov.'},
+    {dim:'TF',key:'F', en:'I weigh how a decision affects people’s feelings and harmony.', sk:'Zvažujem, ako rozhodnutie ovplyvní pocity ľudí a harmóniu.'},
+    {dim:'TF',key:'T', en:'I can stay objective even in emotionally charged situations.', sk:'Aj v emočne vypätých situáciách dokážem zostať objektívny.'},
+    {dim:'TF',key:'F', en:'I am easily moved by others’ emotions and tend to be empathetic.', sk:'Ľahko ma dojmú emócie druhých a bývam empatický.'},
+    {dim:'TF',key:'T', en:'I value fairness and consistency over compassion when they clash.', sk:'Keď sa dostanú do sporu, cením si férovosť a dôslednosť viac než súcit.'},
+    {dim:'JP',key:'J', en:'I like to have a clear plan and stick to a schedule.', sk:'Mám rád jasný plán a držím sa harmonogramu.'},
+    {dim:'JP',key:'P', en:'I prefer to keep my options open and stay flexible.', sk:'Radšej si nechávam otvorené možnosti a zostávam flexibilný.'},
+    {dim:'JP',key:'J', en:'I feel satisfied when tasks are finished and checked off.', sk:'Cítim uspokojenie, keď sú úlohy dokončené a odškrtnuté.'},
+    {dim:'JP',key:'P', en:'I often do my best work at the last minute.', sk:'Najlepšie pracujem často na poslednú chvíľu.'},
+    {dim:'JP',key:'J', en:'I like things organized, settled and decided in advance.', sk:'Mám rád veci usporiadané, vyriešené a vopred rozhodnuté.'}
+  ],
+  results:{
+    subtitle:{en:'Your personality type', sk:'Tvoj typ osobnosti'},
+    barsTitle:{en:'Your preferences', sk:'Tvoje preferencie'},
+    poles:{
+      sk:{E:'Extraverzia',I:'Introverzia',S:'Zmysly',N:'Intuícia',T:'Myslenie',F:'Cítenie',J:'Usudzovanie',P:'Vnímanie'},
+      en:{E:'Extraversion',I:'Introversion',S:'Sensing',N:'Intuition',T:'Thinking',F:'Feeling',J:'Judging',P:'Perceiving'}
+    },
+    types:{ sk:{
+      INTJ:{name:'Architekt',desc:'Strategický, nezávislý a vizionársky — tvoríš dlhodobé plány a ovládaš zložité systémy.'},
+      INTP:{name:'Mysliteľ',desc:'Zvedavý a logický, rád rozpletáš myšlienky a skúmaš, ako všetko funguje.'},
+      ENTJ:{name:'Veliteľ',desc:'Odvážny a rozhodný, prirodzene preberáš velenie a vedieš ľudí k veľkým cieľom.'},
+      ENTP:{name:'Diskutér',desc:'Bystrý a vynaliezavý, žiješ z možností, nápadov a dobrej výzvy.'},
+      INFJ:{name:'Advokát',desc:'Vnímavý a idealistický, hľadáš zmysel a ticho pracuješ pre dobro druhých.'},
+      INFP:{name:'Mediátor',desc:'Empatický a vedený hodnotami, riadiš sa hlbokými ideálmi a bohatým vnútorným svetom.'},
+      ENFJ:{name:'Protagonista',desc:'Vrelý a inšpiratívny, povzbudzuješ ľudí a spájaš ich okolo spoločnej vízie.'},
+      ENFP:{name:'Bojovník',desc:'Nadšený a nápaditý, rozžiariš miestnosť a hľadáš zmysluplné spojenie.'},
+      ISTJ:{name:'Logistik',desc:'Spoľahlivý a dôkladný, ceníš si povinnosť, poriadok a robiť veci správne.'},
+      ISFJ:{name:'Ochranca',desc:'Starostlivý a spoľahlivý, ticho chrániš a podporuješ ľudí, ktorých máš rád.'},
+      ESTJ:{name:'Manažér',desc:'Organizovaný a priamy, preberáš velenie a držíš veci v chode.'},
+      ESFJ:{name:'Konzul',desc:'Spoločenský a podporujúci, vytváraš harmóniu a staráš sa o potreby všetkých.'},
+      ISTP:{name:'Virtuóz',desc:'Praktický a chladnokrvný, miluješ riešenie problémov rukami a to, ako veci fungujú.'},
+      ISFP:{name:'Dobrodruh',desc:'Jemný a spontánny, žiješ prítomným okamihom a vyjadruješ sa činmi.'},
+      ESTP:{name:'Podnikateľ',desc:'Energický a odvážny, konáš rýchlo, riskuješ a žiješ z reálnej akcie.'},
+      ESFP:{name:'Bavič',desc:'Hravý a spontánny, prinášaš radosť, vrelosť a energiu, kamkoľvek prídeš.'}
+    }, en:{
+      INTJ:{name:'The Architect',desc:'Strategic, independent and visionary — you build long-term plans and master complex systems.'},
+      INTP:{name:'The Thinker',desc:'Curious and logical, you love untangling ideas and questioning how everything works.'},
+      ENTJ:{name:'The Commander',desc:'Bold and decisive, you naturally take charge and drive people toward big goals.'},
+      ENTP:{name:'The Debater',desc:'Quick-witted and inventive, you thrive on possibilities, ideas and a good challenge.'},
+      INFJ:{name:'The Advocate',desc:'Insightful and idealistic, you seek meaning and quietly work to help others.'},
+      INFP:{name:'The Mediator',desc:'Empathetic and values-driven, you are guided by deep ideals and a rich inner life.'},
+      ENFJ:{name:'The Protagonist',desc:'Warm and inspiring, you lift people up and bring them together around a vision.'},
+      ENFP:{name:'The Campaigner',desc:'Enthusiastic and imaginative, you light up rooms and chase meaningful connection.'},
+      ISTJ:{name:'The Logistician',desc:'Reliable and thorough, you value duty, order and getting things done right.'},
+      ISFJ:{name:'The Defender',desc:'Caring and dependable, you quietly protect and support the people you love.'},
+      ESTJ:{name:'The Executive',desc:'Organized and direct, you take charge and keep things running smoothly.'},
+      ESFJ:{name:'The Consul',desc:'Sociable and supportive, you create harmony and look after everyone’s needs.'},
+      ISTP:{name:'The Virtuoso',desc:'Practical and cool-headed, you love hands-on problem solving and how things work.'},
+      ISFP:{name:'The Adventurer',desc:'Gentle and spontaneous, you live in the moment and express yourself through action.'},
+      ESTP:{name:'The Entrepreneur',desc:'Energetic and bold, you act fast, take risks and thrive on real-world action.'},
+      ESFP:{name:'The Entertainer',desc:'Fun-loving and spontaneous, you bring joy, warmth and energy wherever you go.'}
+    } }
+  }
+});
+</script>
+</body>
+</html>

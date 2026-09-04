@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 5 Love Languages · Know Yourself</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<main class="wrap" id="app"></main>
+<script src="assets/store.js"></script>
+<script src="assets/app.js"></script>
+<script>
+KY.initTopic({
+  nav:'love', type:'love', badgeClass:'b2', emoji:'💗',
+  kicker:{en:'Connection', sk:'Spojenie'},
+  title:{en:'The 5 Love Languages', sk:'5 jazykov lásky'},
+  lead:{en:'People give and receive love in different "languages." Knowing yours — and your partner’s — helps love actually land. There are five, and most of us have one or two that matter most.',
+        sk:'Ľudia dávajú a prijímajú lásku v rôznych „jazykoch". Keď poznáš ten svoj — aj partnerov — láska skutočne zasiahne cieľ. Je ich päť a väčšina z nás má jeden či dva, na ktorých záleží najviac.'},
+  chips:[
+    {title:{en:'💬 Words of Affirmation', sk:'💬 Slová uznania'}, body:{en:'Praise, encouragement, "I love you"', sk:'Pochvala, povzbudenie, „ľúbim ťa"'}},
+    {title:{en:'⏳ Quality Time', sk:'⏳ Spoločný čas'}, body:{en:'Undivided, present attention', sk:'Nerozdelená, prítomná pozornosť'}},
+    {title:{en:'🎁 Receiving Gifts', sk:'🎁 Prijímanie darov'}, body:{en:'Thoughtful, meaningful tokens', sk:'Premyslené, zmysluplné darčeky'}},
+    {title:{en:'🛠️ Acts of Service', sk:'🛠️ Skutky služby'}, body:{en:'Helpful actions that ease your load', sk:'Užitočné činy, ktoré ti uľahčia bremeno'}},
+    {title:{en:'🤗 Physical Touch', sk:'🤗 Fyzický dotyk'}, body:{en:'Closeness, hugs, affection', sk:'Blízkosť, objatia, nežnosť'}}
+  ],
+  explanation:{
+    en:'<p>The idea, popularized by Gary Chapman, is that we each have an emotional "love tank." It fills fastest when love is expressed in the language we most understand.</p>'+
+       '<h4>The five languages</h4>'+
+       '<p><b>Words of Affirmation:</b> You feel loved through spoken or written appreciation, compliments and encouragement. Criticism cuts especially deep.</p>'+
+       '<p><b>Quality Time:</b> Nothing says love like full, undistracted attention — real conversation and shared activities, phones away.</p>'+
+       '<p><b>Receiving Gifts:</b> It is not materialism. A thoughtful gift is a visual symbol that someone was thinking of you.</p>'+
+       '<p><b>Acts of Service:</b> Actions speak loudest. When someone does something to lighten your load, you feel cared for.</p>'+
+       '<p><b>Physical Touch:</b> A hug, a hand on the shoulder, closeness on the couch — touch communicates safety and love.</p>'+
+       '<h4>Why it matters</h4>'+
+       '<p>Conflict often comes from speaking different languages: one partner cooks dinner (Acts of Service) while the other just wanted to be told "I appreciate you" (Words). Learn both languages and effort stops getting lost in translation.</p>',
+    sk:'<p>Myšlienka, ktorú spopularizoval Gary Chapman, hovorí, že každý máme emočnú „nádrž lásky". Najrýchlejšie sa plní vtedy, keď je láska vyjadrená v jazyku, ktorému najviac rozumieme.</p>'+
+       '<h4>Päť jazykov</h4>'+
+       '<p><b>Slová uznania:</b> Lásku cítiš cez vyslovené alebo napísané ocenenie, komplimenty a povzbudenie. Kritika ťa zasiahne obzvlášť hlboko.</p>'+
+       '<p><b>Spoločný čas:</b> Nič nevyjadrí lásku tak ako plná, nerozptýlená pozornosť — skutočný rozhovor a spoločné aktivity, telefóny bokom.</p>'+
+       '<p><b>Prijímanie darov:</b> Nie je to materializmus. Premyslený dar je viditeľný symbol, že na teba niekto myslel.</p>'+
+       '<p><b>Skutky služby:</b> Činy hovoria najhlasnejšie. Keď niekto spraví niečo, čo ti uľahčí bremeno, cítiš sa milovaný.</p>'+
+       '<p><b>Fyzický dotyk:</b> Objatie, ruka na pleci, blízkosť na gauči — dotyk komunikuje bezpečie a lásku.</p>'+
+       '<h4>Prečo na tom záleží</h4>'+
+       '<p>Konflikt často pramení z toho, že hovoríme rôznymi jazykmi: jeden partner uvarí večeru (skutky služby), zatiaľ čo druhý chcel len počuť „vážim si ťa" (slová). Nauč sa oba jazyky a úsilie sa prestane strácať v preklade.</p>'
+  },
+  testBtn:{en:'Find your love language →', sk:'Zisti svoj jazyk lásky →'},
+  questions:[
+    {key:'WA', en:'Hearing "I love you" and words of appreciation means a lot to me.', sk:'Počuť „ľúbim ťa" a slová ocenenia pre mňa veľa znamená.'},
+    {key:'WA', en:'A heartfelt compliment can genuinely make my whole day.', sk:'Úprimný kompliment mi dokáže spraviť celý deň.'},
+    {key:'WA', en:'Encouraging words help me feel supported in a relationship.', sk:'Povzbudivé slová mi pomáhajú cítiť sa vo vzťahu podporovaný.'},
+    {key:'QT', en:'I feel most loved when my partner gives me their undivided attention.', sk:'Najviac milovaný sa cítim, keď mi partner venuje nerozdelenú pozornosť.'},
+    {key:'QT', en:'Uninterrupted time together matters more to me than gifts.', sk:'Neprerušený spoločný čas pre mňa znamená viac než dary.'},
+    {key:'QT', en:'I cherish deep one-on-one conversations with my partner.', sk:'Cením si hlboké rozhovory s partnerom medzi štyrmi očami.'},
+    {key:'RG', en:'A thoughtful gift makes me feel truly cared for.', sk:'Premyslený dar mi dá pocit, že na mne niekomu naozaj záleží.'},
+    {key:'RG', en:'I keep and treasure meaningful presents from people I love.', sk:'Zmysluplné darčeky od blízkych si uchovávam a vážim.'},
+    {key:'RG', en:'It is the thought and effort behind a gift that touches me most.', sk:'Najviac ma dojme myšlienka a úsilie za darom.'},
+    {key:'AS', en:'When someone helps me with a task, I feel deeply loved.', sk:'Keď mi niekto pomôže s nejakou úlohou, cítim sa hlboko milovaný.'},
+    {key:'AS', en:'Actions like cooking or running errands for me speak louder than words.', sk:'Činy ako uvarenie jedla či vybavenie pochôdzok hovoria viac než slová.'},
+    {key:'AS', en:'I appreciate it most when my partner eases my burden by doing things.', sk:'Najviac oceňujem, keď mi partner uľahčí bremeno tým, že niečo spraví.'},
+    {key:'PT', en:'A hug or holding hands makes me feel connected and secure.', sk:'Objatie alebo držanie za ruky mi dáva pocit spojenia a istoty.'},
+    {key:'PT', en:'Physical affection is essential for me to feel loved.', sk:'Fyzická nežnosť je pre mňa nevyhnutná, aby som sa cítil milovaný.'},
+    {key:'PT', en:'I feel reassured through touch more than through words.', sk:'Cez dotyk sa upokojím viac než cez slová.'}
+  ],
+  results:{
+    subtitle:{en:'Your primary love language', sk:'Tvoj hlavný jazyk lásky'},
+    barsTitle:{en:'How you rank', sk:'Tvoje poradie'},
+    cats:{ sk:{
+      WA:{name:'Slová uznania',emoji:'💬',desc:'Najviac lásky cítiš cez vyslovené a napísané ocenenie — komplimenty, povzbudenie a počutie, koľko pre niekoho znamenáš.'},
+      QT:{name:'Spoločný čas',emoji:'⏳',desc:'Najviac lásky cítiš cez nerozdelenú, prítomnú pozornosť — skutočný rozhovor a spoločné chvíle bez rušenia.'},
+      RG:{name:'Prijímanie darov',emoji:'🎁',desc:'Najviac lásky cítiš cez premyslené dary — viditeľné symboly, že na teba niekto myslel a vynaložil úsilie.'},
+      AS:{name:'Skutky služby',emoji:'🛠️',desc:'Najviac lásky cítiš, keď pre teba ľudia robia užitočné veci — činy, ktoré ti uľahčia bremeno, hovoria viac než slová.'},
+      PT:{name:'Fyzický dotyk',emoji:'🤗',desc:'Najviac lásky cítiš cez blízkosť a nežnosť — objatia, držanie za ruky a fyzickú vrúcnosť, ktoré ti dávajú istotu.'}
+    }, en:{
+      WA:{name:'Words of Affirmation',emoji:'💬',desc:'You feel most loved through spoken and written appreciation — compliments, encouragement and hearing how much you mean to someone.'},
+      QT:{name:'Quality Time',emoji:'⏳',desc:'You feel most loved through undivided, present attention — real conversation and shared moments with no distractions.'},
+      RG:{name:'Receiving Gifts',emoji:'🎁',desc:'You feel most loved through thoughtful gifts — visible symbols that someone was thinking of you and made an effort.'},
+      AS:{name:'Acts of Service',emoji:'🛠️',desc:'You feel most loved when people do helpful things for you — actions that ease your load speak louder than words.'},
+      PT:{name:'Physical Touch',emoji:'🤗',desc:'You feel most loved through closeness and affection — hugs, hand-holding and physical warmth bring you security.'}
+    } }
+  }
+});
+</script>
+</body>
+</html>

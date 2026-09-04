@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Know Yourself · Personality, Love & Attachment</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<main class="wrap" id="app"></main>
+<script src="assets/store.js"></script>
+<script src="assets/app.js"></script>
+<script>
+KY.initHome({
+  heroTitle:{en:'Understand <em>who you are</em> and how you love',
+             sk:'Spoznaj, <em>kto si</em> a ako miluješ'},
+  heroSub:{en:'Three quick, science-inspired self-tests — your personality type, your love language, and your attachment style. Pick one to begin.',
+           sk:'Tri rýchle testy inšpirované psychológiou — tvoj typ osobnosti, tvoj jazyk lásky a tvoj typ vzťahovej väzby. Vyber si jeden a začni.'},
+  explore:{en:'Explore →', sk:'Preskúmať →'},
+  cards:[
+    {href:'mbti.html', badgeClass:'b1', emoji:'🧠',
+     kicker:{en:'Personality', sk:'Osobnosť'},
+     title:{en:'The 16 Personality Types', sk:'16 typov osobnosti'},
+     body:{en:'Discover your four-letter type across 16 personalities — how you think, decide and recharge.',
+           sk:'Objav svoj štvorpísmenový typ spomedzi 16 osobností — ako myslíš, rozhoduješ sa a načerpáš energiu.'}},
+    {href:'love.html', badgeClass:'b2', emoji:'💗',
+     kicker:{en:'Connection', sk:'Spojenie'},
+     title:{en:'The 5 Love Languages', sk:'5 jazykov lásky'},
+     body:{en:'Find out how you most naturally give and receive love across the five love languages.',
+           sk:'Zisti, ako najprirodzenejšie dávaš a prijímaš lásku v rámci piatich jazykov lásky.'}},
+    {href:'attachment.html', badgeClass:'b3', emoji:'🔗',
+     kicker:{en:'Relationships', sk:'Vzťahy'},
+     title:{en:'Attachment Styles', sk:'Typy vzťahovej väzby'},
+     body:{en:'Learn how you handle closeness, trust and conflict through your attachment style.',
+           sk:'Spoznaj, ako zvládaš blízkosť, dôveru a konflikt cez svoj typ vzťahovej väzby.'}}
+  ],
+  disclaimer:{en:'These tests are simplified, for entertainment and self-reflection only, and are not psychological diagnoses or professional advice. Your answers stay in your browser — nothing is saved or sent anywhere.',
+              sk:'Tieto testy sú zjednodušené, slúžia len na zábavu a sebareflexiu a nie sú psychologickou diagnózou ani odborným poradenstvom. Tvoje odpovede zostávajú v prehliadači — nič sa neukladá ani neodosiela.'}
+});
+</script>
+</body>
+</html>
